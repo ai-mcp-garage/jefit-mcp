@@ -1,0 +1,21 @@
+[project]
+name = "jefit-mcp"
+version = "0.1.0"
+description = "MCP server for JEFit workout tracking and analysis"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.12",
+    "python-dotenv>=1.0.0",
+    "requests>=2.32.5",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[project.scripts]
+server = "server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
